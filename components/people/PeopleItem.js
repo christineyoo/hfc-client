@@ -1,14 +1,12 @@
-import itemStyles from '../../styles/Item.module.css'
+import peopleItemStyles from '../../styles/PeopleItem.module.css'
 
-const AnimalItem = ({animal}) => {
+const PeopleItem = ({person}) => {
     return (
-        <div className={itemStyles.card}>
-            <h1>{animal.animal_type}</h1>
-            <p>{animal.animal_description}</p>
-            <p>Animal ID: {animal.animal_id}</p>
-            <p>I belong to hooman #{animal.belongs_to_pid}</p>
+        <div className={peopleItemStyles.card}>
+            <h1>{person.fname} {person.lname}</h1>
+            <p>Favorite Fruit: {person.favorite_fruit}</p>
         </div>
     )
 }
 
-export default AnimalItem
+export default PeopleItem
