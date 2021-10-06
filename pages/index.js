@@ -12,6 +12,7 @@ export default function Home({ animals, people }) {
       <CreateAnimals />
       <CreatePeople />
       <AnimalsList animals={animals} />
+      <h1>Select a person&apos;s name to view the profile</h1>
       <PeopleList people={people} />
     </div>
   );
