@@ -2,7 +2,6 @@ import AnimalItem from './AnimalItem';
 import animalStyle from '../../styles/Item.module.css'
 
 const AnimalsList = ({ animals }) => {
-    console.log(animals)
   return (
     <div className={animalStyle.grid}>
       {animals.map((animal) => (
