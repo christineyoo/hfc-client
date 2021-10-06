@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Form =() => {
+const CreatePeople =() => {
     const [fname, setFname] = useState('')
     const [lname, setLname] = useState('')
     const [fruit, setFruit] = useState('')
@@ -18,6 +18,7 @@ const Form =() => {
         setFname('')
         setLname('')
         setFruit('')
+        window.location.reload(true)
     }
 
 return (
@@ -39,4 +40,4 @@ return (
 )
 }
 
-export default Form
+export default CreatePeople
