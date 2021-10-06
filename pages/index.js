@@ -1,16 +1,18 @@
 import AnimalsList from '../components/animals/AnimalsList'
+import PeopleList from '../components/people/PeopleList'
 
 export default function Home({animals}) {
   return (
     <div>
       <AnimalsList animals={animals} />
+      {/* <PeopleList people={people} /> */}
     </div>
   )
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`http://localhost:8000/api/animals`)
-  const animals = await res.json()
+  const animalRes = await fetch(`http://localhost:8000/api/animals`)
+  const animals = await animalRes.json()
 
   return {
     props: {
