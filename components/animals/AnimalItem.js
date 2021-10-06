@@ -7,6 +7,7 @@ const AnimalItem = ({animal}) => {
             <p>{animal.animal_description}</p>
             <p>Animal ID: {animal.animal_id}</p>
             <p>I belong to hooman #{animal.belongs_to_pid}</p>
+            <button>Edit</button>
         </div>
     )
 }

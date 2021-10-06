@@ -18,6 +18,7 @@ const CreatePeople =() => {
         setFname('')
         setLname('')
         setFruit('')
+        window.location.reload(true)
     }
 
 return (

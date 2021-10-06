@@ -1,12 +1,15 @@
 import CreatePeople from '../components/people/CreatePeople'
+import CreateAnimals from '../components/animals/CreateAnimals'
 import AnimalsList from '../components/animals/AnimalsList';
 import PeopleList from '../components/people/PeopleList';
+// import styles from '../styles/Item.module.css'
 
 export default function Home({ animals, people }) {
   
 
   return (
     <div>
+      <CreateAnimals />
       <CreatePeople />
       <AnimalsList animals={animals} />
       <PeopleList people={people} />
