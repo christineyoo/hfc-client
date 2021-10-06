@@ -15,7 +15,6 @@ const CreateAnimals =() => {
             }
         })
         const data = await res.json()
-        console.log(data)
         setType('')
         setDescription('')
         setBelonging('')

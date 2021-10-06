@@ -1,9 +1,9 @@
 import AnimalItem from './AnimalItem';
-import animalStyle from '../../styles/Item.module.css'
+import animalStyles from '../../styles/Item.module.css'
 
 const AnimalsList = ({ animals }) => {
   return (
-    <div className={animalStyle.grid}>
+    <div className={animalStyles.grid}>
       {animals.map((animal) => (
         <AnimalItem key={animal.animal_id} animal={animal} />
       ))}

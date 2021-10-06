@@ -14,8 +14,8 @@ const PeopleItem = ({ person }) => {
     <>
       <div className={peopleItemStyles.card}>
         <Link href='/person/[id]' as={`/person/${person.person_id}`}>
-          <h1>
-            {person.fname} {person.lname}
+          <h1 className={peopleItemStyles.h1}>
+            {person.fname} {person.lname} ID:{person.person_id}
           </h1>
         </Link>
         <p>Favorite Fruit: {person.favorite_fruit}</p>
