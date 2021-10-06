@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-const CreatePeople = ({ person }) => {
-  const [fname, setFname] = useState('');
-  const [lname, setLname] = useState('');
-  const [fruit, setFruit] = useState('');
+const UpdatePerson = ({ person }) => {
+  const [fname, setFname] = useState(person.fname);
+  const [lname, setLname] = useState(person.lname);
+  const [fruit, setFruit] = useState(person.favorite_fruit);
 
-  const handlePost = async (e) => {
+  const handlePatch = async (e) => {
     e.preventDefault();
     const res = await fetch(
       `http://localhost:8000/api/people/${person.person_id}`,
@@ -24,7 +24,7 @@ const CreatePeople = ({ person }) => {
   return (
     <>
       <p>
-        <strong>Create a Person</strong>
+        <strong>Update Person</strong>
       </p>
       <form>
         <label htmlFor='fname'>First Name</label>
@@ -51,10 +51,10 @@ const CreatePeople = ({ person }) => {
           onChange={(e) => setFruit(e.target.value)}
         />
         <br />
-        <button onClick={(e) => handlePost(e)}>Submit</button>
+        <button onClick={(e) => handlePatch(e)}>Submit</button>
       </form>
     </>
   );
 };
 
-export default CreatePeople;
+export default UpdatePerson;

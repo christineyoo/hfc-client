@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 const UpdateAnimal = ({ animal }) => {
-  const [type, setType] = useState('');
-  const [description, setDescription] = useState('');
-  const [belonging, setBelonging] = useState('');
+  const [type, setType] = useState(animal.animal_type);
+  const [description, setDescription] = useState(animal.animal_description);
+  const [belonging, setBelonging] = useState(animal.belongs_to_pid);
 
   const editAnimal = async (e) => {
     e.preventDefault();
